@@ -1,59 +1,52 @@
 /**
- * Core TypeScript interfaces for Frame Portfolio
- * Based on SPECIFICATION.md data model requirements
+ * Core TypeScript interfaces for Professional Portfolio
  */
 
-export type ProjectCategory = 'portraits' | 'landscapes' | 'editorial' | 'architecture' | 'documentary';
-
-export type AspectRatio = 'portrait' | 'landscape' | 'square';
-
-export interface ProjectImage {
-  id: string;
-  src: string;
-  alt: string;
-  aspectRatio: AspectRatio;
-  caption?: string;
-}
-
-export interface Project {
+export interface ExperienceEntry {
   id: string;
   title: string;
-  category: ProjectCategory;
-  year: string;
-  coverImage: string;
-  images: ProjectImage[];
-  description: string;
-  client?: string;
-  camera?: string;
-  location?: string;
+  company: string;
+  location: string;
+  startDate: string;
+  endDate: string;
+  description: string[];
   slug: string;
+  category: 'trade-finance' | 'operations' | 'customer-service' | 'quality';
 }
 
-export interface PhotographerInfo {
+export interface SkillCategory {
   name: string;
-  tagline: string;
-  heroIntroduction: string;
-  biography: string;
-  approach: string;
-  awards: string[];
-  clients: string[];
-  education: string;
+  skills: string[];
+}
+
+export interface Education {
+  institution: string;
+  degree: string;
   location: string;
+  period: string;
+  status?: string;
+}
+
+export interface ProfessionalInfo {
+  name: string;
+  title: string;
+  summary: string;
   email: string;
   phone: string;
+  location: string;
   availability: string;
   socialLinks: {
-    instagram?: string;
     linkedin?: string;
-    behance?: string;
+    github?: string;
   };
-  portraitImage: string;
+  skills: SkillCategory[];
+  education: Education[];
 }
 
 export interface ContactSubmission {
   name: string;
   email: string;
-  projectType: 'editorial' | 'commercial' | 'personal';
+  inquiryType: 'collaboration' | 'opportunity' | 'general';
   message: string;
   timestamp: Date;
 }
