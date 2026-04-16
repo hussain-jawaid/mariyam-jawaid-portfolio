@@ -4,6 +4,7 @@ import { professionalInfo } from '@/data/professional';
 import { ContactForm } from '@/components/forms/ContactForm';
 import { Separator } from '@/components/ui/separator';
 import { SEOHead } from '@/components/seo/SEOHead';
+import avatar from '@/assets/mariyam-avatar.jpg';
 
 export default function Contact() {
   return (
@@ -57,13 +58,24 @@ export default function Contact() {
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.4, delay: 0.1 }}
               >
-                <div className="space-y-3">
-                  <h2 className="text-3xl md:text-4xl font-light tracking-wide">
-                    Contact Information
-                  </h2>
-                  <p className="text-muted-foreground font-light">
-                    Prefer to reach out directly? Here's how you can contact me.
-                  </p>
+                <div className="flex items-center gap-4">
+                  {/* Avatar — AI-generated placeholder, swap with real photo later */}
+                  <img
+                    src={avatar}
+                    alt={professionalInfo.name}
+                    width={768}
+                    height={768}
+                    loading="lazy"
+                    className="size-16 rounded-full object-cover border border-border shadow-md"
+                  />
+                  <div className="space-y-1">
+                    <h2 className="text-2xl md:text-3xl font-light tracking-wide">
+                      Contact Information
+                    </h2>
+                    <p className="text-sm text-muted-foreground font-light">
+                      Prefer to reach out directly?
+                    </p>
+                  </div>
                 </div>
                 <Separator />
                 <div className="space-y-6">
