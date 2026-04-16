@@ -4,6 +4,7 @@ import { professionalInfo } from '@/data/professional';
 import { Separator } from '@/components/ui/separator';
 import { SEOHead } from '@/components/seo/SEOHead';
 import { ScrollReveal } from '@/components/ui/ScrollReveal';
+import aboutPortrait from '@/assets/mariyam-about.jpg';
 
 export default function About() {
   return (
@@ -44,6 +45,19 @@ export default function About() {
                 viewport={{ once: true }}
                 transition={{ duration: 0.4 }}
               >
+                {/* Portrait — AI-generated placeholder, swap with real photo later */}
+                <div className="relative">
+                  <div className="absolute -inset-3 bg-gradient-to-tr from-primary/15 to-accent/25 rounded-sm blur-xl" />
+                  <img
+                    src={aboutPortrait}
+                    alt={`Portrait of ${professionalInfo.name}`}
+                    width={1024}
+                    height={1280}
+                    loading="lazy"
+                    className="relative w-full aspect-[4/5] object-cover rounded-sm border border-border shadow-xl"
+                  />
+                </div>
+
                 <div className="space-y-3">
                   <h2 className="text-4xl md:text-5xl font-light tracking-wide">
                     {professionalInfo.name}

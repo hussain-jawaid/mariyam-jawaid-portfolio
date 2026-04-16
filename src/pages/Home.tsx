@@ -5,6 +5,7 @@ import { ScrollReveal } from '@/components/ui/ScrollReveal';
 import { SEOHead } from '@/components/seo/SEOHead';
 import { ArrowRight, Briefcase, TrendingUp, Shield, Award } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import heroPortrait from '@/assets/mariyam-hero.jpg';
 
 export default function Home() {
   const highlights = [
@@ -26,70 +27,91 @@ export default function Home() {
           <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,hsl(var(--primary)/0.15),transparent_60%)]" />
           <div className="absolute bottom-0 left-0 right-0 h-1/3 bg-gradient-to-t from-background to-transparent" />
 
-          <div className="relative h-full flex flex-col items-center justify-center px-6">
-            <motion.div
-              className="text-center space-y-6 max-w-4xl"
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 1, ease: 'easeOut' }}
-            >
-              <motion.p
-                className="text-sm md:text-base font-light tracking-[0.3em] uppercase text-muted-foreground"
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 1, delay: 0.1 }}
-              >
-                Trade Finance · Banking Professional
-              </motion.p>
-
-              <motion.h1
-                className="text-5xl md:text-7xl lg:text-8xl font-extralight tracking-wide text-foreground"
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 1, delay: 0.2 }}
-              >
-                {professionalInfo.name}
-              </motion.h1>
-
-              <motion.p
-                className="text-xl md:text-2xl font-light tracking-wide text-muted-foreground"
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 1, delay: 0.4 }}
-              >
-                {professionalInfo.title}
-              </motion.p>
-
-              <motion.p
-                className="text-base md:text-lg font-light leading-relaxed text-muted-foreground/80 max-w-2xl mx-auto"
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 1, delay: 0.6 }}
-              >
-                {professionalInfo.summary}
-              </motion.p>
-
+          <div className="relative h-full flex items-center justify-center px-6 lg:px-12">
+            <div className="grid lg:grid-cols-[1.2fr_1fr] gap-10 lg:gap-16 items-center max-w-7xl w-full">
               <motion.div
-                className="flex flex-col sm:flex-row gap-4 justify-center pt-4"
-                initial={{ opacity: 0, y: 20 }}
+                className="text-center lg:text-left space-y-6 order-2 lg:order-1"
+                initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 1, delay: 0.8 }}
+                transition={{ duration: 1, ease: 'easeOut' }}
               >
-                <Link
-                  to="/experience"
-                  className="inline-flex items-center justify-center gap-2 px-8 py-3 bg-primary text-primary-foreground font-light tracking-wide rounded-sm hover:bg-primary/90 transition-colors"
+                <motion.p
+                  className="text-sm md:text-base font-light tracking-[0.3em] uppercase text-muted-foreground"
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 1, delay: 0.1 }}
                 >
-                  View Experience
-                  <ArrowRight className="size-4" />
-                </Link>
-                <Link
-                  to="/contact"
-                  className="inline-flex items-center justify-center gap-2 px-8 py-3 border border-border font-light tracking-wide rounded-sm hover:bg-accent transition-colors"
+                  Trade Finance · Banking Professional
+                </motion.p>
+
+                <motion.h1
+                  className="text-5xl md:text-7xl lg:text-7xl font-extralight tracking-wide text-foreground"
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 1, delay: 0.2 }}
                 >
-                  Get in Touch
-                </Link>
+                  {professionalInfo.name}
+                </motion.h1>
+
+                <motion.p
+                  className="text-xl md:text-2xl font-light tracking-wide text-muted-foreground"
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 1, delay: 0.4 }}
+                >
+                  {professionalInfo.title}
+                </motion.p>
+
+                <motion.p
+                  className="text-base md:text-lg font-light leading-relaxed text-muted-foreground/80 max-w-2xl mx-auto lg:mx-0"
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 1, delay: 0.6 }}
+                >
+                  {professionalInfo.summary}
+                </motion.p>
+
+                <motion.div
+                  className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start pt-4"
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 1, delay: 0.8 }}
+                >
+                  <Link
+                    to="/experience"
+                    className="inline-flex items-center justify-center gap-2 px-8 py-3 bg-primary text-primary-foreground font-light tracking-wide rounded-sm hover:bg-primary/90 transition-colors"
+                  >
+                    View Experience
+                    <ArrowRight className="size-4" />
+                  </Link>
+                  <Link
+                    to="/contact"
+                    className="inline-flex items-center justify-center gap-2 px-8 py-3 border border-border font-light tracking-wide rounded-sm hover:bg-accent transition-colors"
+                  >
+                    Get in Touch
+                  </Link>
+                </motion.div>
               </motion.div>
-            </motion.div>
+
+              {/* Hero portrait — AI-generated placeholder, swap with real photo later */}
+              <motion.div
+                className="order-1 lg:order-2 flex justify-center lg:justify-end"
+                initial={{ opacity: 0, scale: 0.95 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 1, delay: 0.3, ease: 'easeOut' }}
+              >
+                <div className="relative">
+                  <div className="absolute -inset-4 bg-gradient-to-tr from-primary/20 to-accent/30 rounded-sm blur-2xl" />
+                  <img
+                    src={heroPortrait}
+                    alt={`${professionalInfo.name} — ${professionalInfo.title}`}
+                    width={1024}
+                    height={1280}
+                    className="relative w-56 sm:w-72 lg:w-full max-w-md aspect-[4/5] object-cover rounded-sm border border-border shadow-2xl"
+                  />
+                </div>
+              </motion.div>
+            </div>
           </div>
         </section>
 
