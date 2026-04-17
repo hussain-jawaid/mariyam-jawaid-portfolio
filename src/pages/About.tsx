@@ -16,17 +16,17 @@ export default function About() {
 
       <div className="min-h-screen">
         {/* Hero Section */}
-        <section className="py-24 md:py-32 px-6 lg:px-8 border-b border-border">
+        <section className="py-20 md:py-32 px-4 sm:px-6 lg:px-8 border-b border-border">
           <div className="max-w-4xl mx-auto text-center space-y-6">
             <motion.div
               initial={{ opacity: 0.8, y: 10 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.4 }}
             >
-              <h1 className="text-5xl md:text-6xl lg:text-7xl font-light tracking-wide mb-4">
+              <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-light tracking-wide mb-4">
                 About
               </h1>
-              <p className="text-lg md:text-xl text-muted-foreground font-light tracking-wide">
+              <p className="text-base sm:text-lg md:text-xl text-muted-foreground font-light tracking-wide">
                 {professionalInfo.title} · {professionalInfo.location}
               </p>
             </motion.div>
@@ -34,9 +34,9 @@ export default function About() {
         </section>
 
         {/* Bio Section */}
-        <section className="py-16 md:py-24 px-6 lg:px-8">
+        <section className="py-16 md:py-24 px-4 sm:px-6 lg:px-8">
           <div className="max-w-6xl mx-auto">
-            <div className="grid md:grid-cols-2 gap-12 lg:gap-16 items-start">
+            <div className="grid md:grid-cols-2 gap-10 md:gap-12 lg:gap-16 items-start">
               {/* Left: Professional Summary */}
               <motion.div
                 className="space-y-8"
@@ -46,7 +46,7 @@ export default function About() {
                 transition={{ duration: 0.4 }}
               >
                 {/* Portrait — AI-generated placeholder, swap with real photo later */}
-                <div className="relative">
+                <div className="relative mx-auto md:mx-0 w-56 sm:w-72 md:w-full max-w-sm">
                   <div className="absolute -inset-3 bg-gradient-to-tr from-primary/15 to-accent/25 rounded-sm blur-xl" />
                   <img
                     src={aboutPortrait}
@@ -58,11 +58,11 @@ export default function About() {
                   />
                 </div>
 
-                <div className="space-y-3">
-                  <h2 className="text-4xl md:text-5xl font-light tracking-wide">
+                <div className="space-y-3 text-center md:text-left">
+                  <h2 className="text-3xl sm:text-4xl md:text-5xl font-light tracking-wide break-words">
                     {professionalInfo.name}
                   </h2>
-                  <p className="text-xl text-muted-foreground font-light tracking-wide">
+                  <p className="text-lg sm:text-xl text-muted-foreground font-light tracking-wide">
                     {professionalInfo.title}
                   </p>
                 </div>
