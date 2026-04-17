@@ -21,16 +21,16 @@ export default function Home() {
 
       <div className="min-h-screen">
         {/* Hero Section */}
-        <section className="relative h-screen w-full overflow-hidden">
+        <section className="relative min-h-screen w-full overflow-hidden pt-24 pb-16 lg:pt-0 lg:pb-0 lg:h-screen">
           {/* Abstract gradient background */}
           <div className="absolute inset-0 bg-gradient-to-br from-primary/20 via-background to-accent/30" />
           <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,hsl(var(--primary)/0.15),transparent_60%)]" />
           <div className="absolute bottom-0 left-0 right-0 h-1/3 bg-gradient-to-t from-background to-transparent" />
 
-          <div className="relative h-full flex items-center justify-center px-6 lg:px-12">
-            <div className="grid lg:grid-cols-[1.2fr_1fr] gap-10 lg:gap-16 items-center max-w-7xl w-full">
+          <div className="relative lg:h-full flex items-center justify-center px-4 sm:px-6 lg:px-12">
+            <div className="grid lg:grid-cols-[1.2fr_1fr] gap-8 sm:gap-10 lg:gap-16 items-center max-w-7xl w-full">
               <motion.div
-                className="text-center lg:text-left space-y-6 order-2 lg:order-1"
+                className="text-center lg:text-left space-y-5 sm:space-y-6 order-2 lg:order-1"
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 1, ease: 'easeOut' }}
@@ -45,7 +45,7 @@ export default function Home() {
                 </motion.p>
 
                 <motion.h1
-                  className="text-5xl md:text-7xl lg:text-7xl font-extralight tracking-wide text-foreground"
+                  className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extralight tracking-wide text-foreground break-words"
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 1, delay: 0.2 }}
@@ -100,14 +100,14 @@ export default function Home() {
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 1, delay: 0.3, ease: 'easeOut' }}
               >
-                <div className="relative">
+                <div className="relative w-44 sm:w-60 md:w-72 lg:w-full lg:max-w-md">
                   <div className="absolute -inset-4 bg-gradient-to-tr from-primary/20 to-accent/30 rounded-sm blur-2xl" />
                   <img
                     src={heroPortrait}
                     alt={`${professionalInfo.name} — ${professionalInfo.title}`}
                     width={1024}
                     height={1280}
-                    className="relative w-56 sm:w-72 lg:w-full max-w-md aspect-[4/5] object-cover rounded-sm border border-border shadow-2xl"
+                    className="relative w-full aspect-[4/5] object-cover rounded-sm border border-border shadow-2xl"
                   />
                 </div>
               </motion.div>
