@@ -62,14 +62,6 @@ export default function Home() {
                   {professionalInfo.title}
                 </motion.p>
 
-                <motion.p
-                  className="text-base md:text-lg font-light leading-relaxed text-muted-foreground/80 max-w-2xl mx-auto lg:mx-0"
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 1, delay: 0.6 }}
-                >
-                  {professionalInfo.summary}
-                </motion.p>
 
                 <motion.div
                   className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start pt-4"
