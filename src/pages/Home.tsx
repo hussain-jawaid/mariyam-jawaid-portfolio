@@ -174,19 +174,16 @@ export default function Home() {
                 return (
                   <li key={exp.id} className="relative pl-10 sm:pl-14 pb-10 last:pb-0">
                     <ScrollReveal delay={index * 0.1}>
-                      <Link
-                        to={`/experience/${exp.slug}`}
-                        className="group block"
-                      >
+                      <div>
                         {/* Dot */}
                         <span
                           aria-hidden="true"
-                          className="absolute left-0 top-1.5 flex items-center justify-center size-6 sm:size-8 rounded-full bg-background border border-primary/40 text-primary transition-all duration-300 group-hover:scale-110 group-hover:border-primary group-hover:bg-primary/10"
+                          className="absolute left-0 top-1.5 flex items-center justify-center size-6 sm:size-8 rounded-full bg-background border border-primary/40 text-primary"
                         >
                           <CategoryIcon className="size-3 sm:size-4" />
                         </span>
 
-                        <div className="transition-transform duration-300 group-hover:translate-x-1">
+                        <div>
                           {/* Date / current badge */}
                           <div className="flex items-center gap-3 mb-2">
                             <span className="text-xs font-light tracking-[0.2em] uppercase text-muted-foreground">
@@ -199,14 +196,14 @@ export default function Home() {
                             )}
                           </div>
 
-                          <h3 className="text-xl md:text-2xl font-light tracking-wide text-foreground group-hover:text-primary transition-colors">
+                          <h3 className="text-xl md:text-2xl font-light tracking-wide text-foreground">
                             {exp.title}
                           </h3>
                           <p className="text-sm text-muted-foreground font-light tracking-wide mt-1">
                             {exp.company} · {exp.location}
                           </p>
                         </div>
-                      </Link>
+                      </div>
                     </ScrollReveal>
                   </li>
                 );
