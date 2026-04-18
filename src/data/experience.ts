@@ -11,8 +11,8 @@ export const experiences: ExperienceEntry[] = [
     category: 'trade-finance',
     slug: 'trade-business-analyst',
     description: [
-      'Facilitate trade import/export transactions between branches and central processing units (CPU)',
-      'Serve southern region branches as part of the Trade Hub, managing high-priority client accounts',
+      'Managed trade finance operations for retail and SME clients across southern branches',
+      'Spearheaded a strategic client engagement initiative for the Trade Business',
       'Coordinate with FX teams to secure competitive rates and ensure accurate payment execution',
       'Structure trade finance solutions, including LC payments, import bills, DA maturity bills, and export collections',
     ],
@@ -27,8 +27,8 @@ export const experiences: ExperienceEntry[] = [
     category: 'trade-finance',
     slug: 'relationship-manager',
     description: [
-      'Managed trade finance operations for corporate and commercial clients across southern branches',
-      'Built and maintained strong client relationships, improving service efficiency and response times',
+      'Facilitate trade import/export transactions between branches and central processing units (CPU)',
+      'Managed trade finance operations for retail and SME clients across southern branches',
       'Coordinated with internal teams to ensure smooth processing of import/export transactions',
       'Provided tailored trade solutions, including documentary collections and LC handling',
     ],
