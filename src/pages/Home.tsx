@@ -101,7 +101,7 @@ export default function Home() {
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 1, delay: 0.3, ease: 'easeOut' }}
               >
-                <div className="relative w-44 sm:w-60 md:w-72 lg:w-full lg:max-w-md">
+                <div className="relative w-44 sm:w-56 md:w-64 lg:w-full lg:max-w-sm">
                   <div className="absolute -inset-4 bg-gradient-to-tr from-primary/20 to-accent/30 rounded-sm blur-2xl" />
                   <img
                     src={heroPortrait}
