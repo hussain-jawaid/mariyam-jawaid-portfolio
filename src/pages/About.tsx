@@ -4,7 +4,7 @@ import { professionalInfo } from '@/data/professional';
 import { Separator } from '@/components/ui/separator';
 import { SEOHead } from '@/components/seo/SEOHead';
 import { ScrollReveal } from '@/components/ui/ScrollReveal';
-import aboutPortrait from '@/assets/mariyam-about.jpg';
+import aboutPortrait from '@/assets/mariyam-about.jpeg';
 
 export default function About() {
   return (

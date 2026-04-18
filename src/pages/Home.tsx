@@ -5,7 +5,7 @@ import { ScrollReveal } from '@/components/ui/ScrollReveal';
 import { SEOHead } from '@/components/seo/SEOHead';
 import { ArrowRight, Briefcase, TrendingUp, Shield, Award, FileText } from 'lucide-react';
 import { Link } from 'react-router-dom';
-import heroPortrait from '@/assets/mariyam-hero.jpg';
+import heroPortrait from '@/assets/mariyam-hero.jpeg';
 
 export default function Home() {
   const highlights = [

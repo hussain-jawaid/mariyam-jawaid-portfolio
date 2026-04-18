@@ -4,7 +4,7 @@ import { professionalInfo } from '@/data/professional';
 import { ContactForm } from '@/components/forms/ContactForm';
 import { Separator } from '@/components/ui/separator';
 import { SEOHead } from '@/components/seo/SEOHead';
-import avatar from '@/assets/mariyam-avatar.jpg';
+import avatar from '@/assets/mariyam-avatar.jpeg';
 
 export default function Contact() {
   return (
