@@ -11,8 +11,8 @@ export const experiences: ExperienceEntry[] = [
     category: 'trade-finance',
     slug: 'trade-business-analyst',
     description: [
-      'Facilitate trade import/export transactions between branches and central processing units (CPU)',
-      'Serve southern region branches as part of the Trade Hub, managing high-priority client accounts',
+      'Managed trade finance operations for retail and SME clients across southern branches',
+      'Spearheaded a strategic client engagement initiative for the Trade Business',
       'Coordinate with FX teams to secure competitive rates and ensure accurate payment execution',
       'Structure trade finance solutions, including LC payments, import bills, DA maturity bills, and export collections',
     ],
