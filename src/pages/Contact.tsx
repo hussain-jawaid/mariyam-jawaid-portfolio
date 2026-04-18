@@ -4,8 +4,6 @@ import { professionalInfo } from '@/data/professional';
 import { ContactForm } from '@/components/forms/ContactForm';
 import { Separator } from '@/components/ui/separator';
 import { SEOHead } from '@/components/seo/SEOHead';
-import avatar from '@/assets/mariyam-avatar.jpeg';
-
 export default function Contact() {
   return (
     <>
@@ -61,7 +59,7 @@ export default function Contact() {
                 <div className="flex items-center gap-4">
                   {/* Avatar — AI-generated placeholder, swap with real photo later */}
                   <img
-                    src={avatar}
+                    src="/mariyam-avatar.jpeg"
                     alt={professionalInfo.name}
                     width={768}
                     height={768}

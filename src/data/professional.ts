@@ -9,7 +9,7 @@ export const professionalInfo: ProfessionalInfo = {
   location: 'Karachi, Pakistan',
   availability: 'Open to new opportunities',
   socialLinks: {
-    linkedin: 'https://linkedin.com/in/mariyamjawaid',
+    linkedin: 'https://www.linkedin.com/in/mariyam-jawaid-a928b5375/',
   },
   skills: [
     {
