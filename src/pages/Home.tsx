@@ -205,9 +205,6 @@ export default function Home() {
                           <p className="text-sm text-muted-foreground font-light tracking-wide mt-1">
                             {exp.company} · {exp.location}
                           </p>
-                          <p className="text-muted-foreground font-light leading-relaxed mt-3 max-w-2xl">
-                            {exp.description[0]}
-                          </p>
                         </div>
                       </Link>
                     </ScrollReveal>
