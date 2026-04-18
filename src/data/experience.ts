@@ -27,8 +27,8 @@ export const experiences: ExperienceEntry[] = [
     category: 'trade-finance',
     slug: 'relationship-manager',
     description: [
-      'Managed trade finance operations for corporate and commercial clients across southern branches',
-      'Built and maintained strong client relationships, improving service efficiency and response times',
+      'Facilitate trade import/export transactions between branches and central processing units (CPU)',
+      'Managed trade finance operations for retail and SME clients across southern branches',
       'Coordinated with internal teams to ensure smooth processing of import/export transactions',
       'Provided tailored trade solutions, including documentary collections and LC handling',
     ],
