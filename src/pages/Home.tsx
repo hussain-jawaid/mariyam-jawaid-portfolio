@@ -3,7 +3,7 @@ import { professionalInfo } from '@/data/professional';
 import { experiences } from '@/data/experience';
 import { ScrollReveal } from '@/components/ui/ScrollReveal';
 import { SEOHead } from '@/components/seo/SEOHead';
-import { ArrowRight, Briefcase, TrendingUp, Shield, Award } from 'lucide-react';
+import { ArrowRight, Briefcase, TrendingUp, Shield, Award, FileText } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import heroPortrait from '@/assets/mariyam-hero.jpg';
 
@@ -76,6 +76,15 @@ export default function Home() {
                     View Experience
                     <ArrowRight className="size-4" />
                   </Link>
+                  <a
+                    href="/Mariyam_Jawaid_Resume.pdf"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center justify-center gap-2 px-8 py-3 border border-border font-light tracking-wide rounded-sm hover:bg-accent transition-colors"
+                  >
+                    <FileText className="size-4" />
+                    View Resume
+                  </a>
                   <Link
                     to="/contact"
                     className="inline-flex items-center justify-center gap-2 px-8 py-3 border border-border font-light tracking-wide rounded-sm hover:bg-accent transition-colors"
