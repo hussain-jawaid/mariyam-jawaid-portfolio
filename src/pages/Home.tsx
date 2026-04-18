@@ -143,7 +143,7 @@ export default function Home() {
           </ScrollReveal>
         </section>
 
-        {/* Recent Experience */}
+        {/* Recent Experience — Timeline */}
         <section className="py-24 md:py-32 border-t border-border">
           <ScrollReveal>
             <div className="text-center mb-16 space-y-4 px-6">
@@ -157,36 +157,71 @@ export default function Home() {
           </ScrollReveal>
 
           <div className="max-w-4xl mx-auto px-6">
-            {experiences.slice(0, 3).map((exp, index) => (
-              <ScrollReveal key={exp.id} delay={index * 0.1}>
-                <Link
-                  to={`/experience/${exp.slug}`}
-                  className="group block mb-8 p-6 md:p-8 border border-border rounded-sm hover:bg-accent/50 transition-all"
-                >
-                  <div className="flex flex-col md:flex-row md:items-center justify-between gap-2 mb-3">
-                    <h3 className="text-xl md:text-2xl font-light tracking-wide group-hover:text-primary transition-colors">
-                      {exp.title}
-                    </h3>
-                    <span className="text-sm text-muted-foreground font-light tracking-wide">
-                      {exp.startDate} — {exp.endDate}
-                    </span>
-                  </div>
-                  <p className="text-sm text-muted-foreground font-light mb-3">
-                    {exp.company}, {exp.location}
-                  </p>
-                  <p className="text-muted-foreground font-light leading-relaxed">
-                    {exp.description[0]}
-                  </p>
-                </Link>
-              </ScrollReveal>
-            ))}
+            <ol className="relative">
+              {/* Vertical rail */}
+              <div
+                aria-hidden="true"
+                className="absolute left-[11px] sm:left-[15px] top-2 bottom-2 w-px bg-gradient-to-b from-primary/40 via-border to-transparent"
+              />
+
+              {experiences.slice(0, 3).map((exp, index) => {
+                const CategoryIcon =
+                  exp.category === 'quality' ? Shield :
+                  exp.category === 'customer-service' ? Award :
+                  Briefcase;
+                const isCurrent = exp.endDate === 'Present';
+
+                return (
+                  <li key={exp.id} className="relative pl-10 sm:pl-14 pb-10 last:pb-0">
+                    <ScrollReveal delay={index * 0.1}>
+                      <Link
+                        to={`/experience/${exp.slug}`}
+                        className="group block"
+                      >
+                        {/* Dot */}
+                        <span
+                          aria-hidden="true"
+                          className="absolute left-0 top-1.5 flex items-center justify-center size-6 sm:size-8 rounded-full bg-background border border-primary/40 text-primary transition-all duration-300 group-hover:scale-110 group-hover:border-primary group-hover:bg-primary/10"
+                        >
+                          <CategoryIcon className="size-3 sm:size-4" />
+                        </span>
+
+                        <div className="transition-transform duration-300 group-hover:translate-x-1">
+                          {/* Date / current badge */}
+                          <div className="flex items-center gap-3 mb-2">
+                            <span className="text-xs font-light tracking-[0.2em] uppercase text-muted-foreground">
+                              {exp.startDate} — {exp.endDate}
+                            </span>
+                            {isCurrent && (
+                              <span className="inline-flex items-center px-2 py-0.5 text-[10px] font-light tracking-[0.2em] uppercase rounded-full bg-primary/10 text-primary border border-primary/20">
+                                Current
+                              </span>
+                            )}
+                          </div>
+
+                          <h3 className="text-xl md:text-2xl font-light tracking-wide text-foreground group-hover:text-primary transition-colors">
+                            {exp.title}
+                          </h3>
+                          <p className="text-sm text-muted-foreground font-light tracking-wide mt-1">
+                            {exp.company} · {exp.location}
+                          </p>
+                          <p className="text-muted-foreground font-light leading-relaxed mt-3 max-w-2xl">
+                            {exp.description[0]}
+                          </p>
+                        </div>
+                      </Link>
+                    </ScrollReveal>
+                  </li>
+                );
+              })}
+            </ol>
           </div>
 
           <ScrollReveal delay={0.4}>
-            <div className="flex justify-center mt-8 px-6">
+            <div className="flex justify-center mt-12 px-6">
               <Link
                 to="/experience"
-                className="group inline-flex items-center gap-2 text-lg font-light tracking-wide text-foreground hover:text-muted-foreground transition-colors"
+                className="group inline-flex items-center gap-2 text-lg font-light tracking-wide text-foreground hover:text-primary transition-colors"
               >
                 <span>View Full Experience</span>
                 <ArrowRight className="size-5 transition-transform group-hover:translate-x-1" />
